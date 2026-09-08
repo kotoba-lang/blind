@@ -11,7 +11,7 @@
   are 32-byte MACs, so the portable implementation's cost is irrelevant.
 
   Nothing in this namespace prints, logs, or otherwise emits its input."
-  (:require [clojure.string :as str])
+  (:require [kotoba.lang.text :as str])
   #?(:clj (:import [java.nio.charset StandardCharsets])))
 
 (defn bytes?*
@@ -91,7 +91,7 @@
 (defn unhex
   "Hex string (either case, even length) -> bytes."
   [s]
-  (let [s (str/lower-case s)]
+  (let [s (str/lower s)]
     (when (odd? (count s))
       (throw (ex-info "blind.bytes/unhex: odd-length hex string"
                       {:blind/error :bad-hex :length (count s)})))

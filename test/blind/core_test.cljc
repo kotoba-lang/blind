@@ -1,7 +1,7 @@
 (ns blind.core-test
   (:require #?(:clj  [clojure.test :refer [deftest is testing]]
                :cljs [cljs.test :refer [deftest is testing async] :include-macros true])
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [blind.bytes :as b]
             [blind.core :as c]
             [blind.vectors :as v]))

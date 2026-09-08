@@ -24,7 +24,7 @@
       `Count = 0` of each of three plaintext lengths (0, 128 and 408 bits)
       — i.e. exactly the parameters `blind.core` uses: AES-256, 96-bit
       nonce, no AAD, full 128-bit tag."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- rep-hex [byte-hex n] (str/join (repeat n byte-hex)))
 
