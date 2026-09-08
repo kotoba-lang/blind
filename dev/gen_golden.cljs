@@ -20,7 +20,7 @@
 ;; `test/blind/vectors.cljc`. Nothing here reads a key from the
 ;; environment, and nothing here generates one.
 
-(require '[clojure.string :as str])
+(require '[kotoba.lang.text :as str])
 
 (def crypto (js/require "node:crypto"))
 
