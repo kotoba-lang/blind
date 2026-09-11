@@ -1,4 +1,4 @@
-#!/usr/bin/env nbb
+#!/usr/bin/env kbb
 ;; Regenerate the `golden-blind` / `golden-seal` vectors in
 ;; `test/blind/vectors.cljk`.
 ;;

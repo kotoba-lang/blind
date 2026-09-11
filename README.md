@@ -185,8 +185,8 @@ known-answer vectors from third parties, plus cross-runtime agreement:
    random-nonce mode *does* lose it).
 
 ```bash
-clojure -M:test        # JVM (javax.crypto)
-clojure -M:lint        # clj-kondo
+kbb -M:test        # JVM (javax.crypto)
+kbb -M:lint        # clj-kondo
 npm install && npm run test:cljs   # real ClojureScript via shadow-cljs on Node's Web Crypto
 ```
 
