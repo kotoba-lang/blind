@@ -1,6 +1,6 @@
 #!/usr/bin/env nbb
 ;; Regenerate the `golden-blind` / `golden-seal` vectors in
-;; `test/blind/vectors.cljc`.
+;; `test/blind/vectors.cljk`.
 ;;
 ;; This script deliberately does NOT use `blind.core`. It computes the same
 ;; composition with Node's `node:crypto` — a third implementation,
@@ -17,7 +17,7 @@
 ;; noticed rather than absorbed.
 ;;
 ;; Key material below is the public test fixture from
-;; `test/blind/vectors.cljc`. Nothing here reads a key from the
+;; `test/blind/vectors.cljk`. Nothing here reads a key from the
 ;; environment, and nothing here generates one.
 
 (require '[kotoba.lang.text :as str])
