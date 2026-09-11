@@ -107,7 +107,7 @@
 ;; the JVM suite and the ClojureScript suite are asserting against the same
 ;; literal bytes rather than each merely agreeing with itself.
 ;;
-;; PROVENANCE: these were computed by `dev/gen_golden.cljs` (nbb), which
+;; PROVENANCE: these were computed by `dev/gen_golden.cljk` (nbb), which
 ;; uses Node's `node:crypto` — a THIRD implementation, independent of both
 ;; `javax.crypto` and Web Crypto. Regenerate with `npm run golden`; if the
 ;; regenerated values differ from what is checked in here, something
