@@ -11,8 +11,7 @@
   are 32-byte MACs, so the portable implementation's cost is irrelevant.
 
   Nothing in this namespace prints, logs, or otherwise emits its input."
-  (:require [kotoba.lang.text :as str])
-  #?(:clj (:import [java.nio.charset StandardCharsets])))
+  (:require [kotoba.bytes :as kbytes] [kotoba.lang.text :as str]))
 
 (defn bytes?*
   "True if `x` is this platform's byte-sequence type (`byte[]` on the JVM,
@@ -44,13 +43,13 @@
 (defn utf8
   "String -> UTF-8 bytes."
   [^String s]
-  #?(:clj  (.getBytes s StandardCharsets/UTF_8)
+  #?(:clj  (kbytes/utf8-bytes s)
      :cljs (.encode (js/TextEncoder.) s)))
 
 (defn utf8->str
   "UTF-8 bytes -> string."
   [bs]
-  #?(:clj  (String. ^bytes bs StandardCharsets/UTF_8)
+  #?(:clj  (kbytes/utf8-string ^bytes bs)
      :cljs (.decode (js/TextDecoder.) bs)))
 
 (defn concat-bytes
